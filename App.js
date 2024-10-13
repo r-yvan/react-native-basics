@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { Button, Text, View } from "react-native";
+import FlatlistDemo from "./components/FlatlistDemo";
 
 export default function App() {
+  const [name, setName] = useState("Rubuto Yvan");
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View className="flex h-full justify-center items-center bg-gray-900">
+      <FlatlistDemo />
+      <Text>My Name is {name}</Text>
+      <View className="pt-10">
+        <Button title="Update State" onPress={() => setName("Noella")} />
+      </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
