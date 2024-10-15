@@ -1,6 +1,12 @@
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { useState } from "react";
 import React from "react";
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  InputText,
+} from "react-native";
 
 const FlatlistDemo = () => {
   const [people, setPeople] = useState([
@@ -27,14 +33,14 @@ const FlatlistDemo = () => {
   };
 
   return (
-    <View className="justify-center items-center pt-32">
+    <View className="justify-center items-center pt-16">
       <FlatList
         className="flex"
         keyExtractor={(item) => item.id}
         data={people}
         renderItem={({ item }) => (
-          <View className="bg-gray-600 mb-5 p-3 rounded-2xl flex flex-row justify-between">
-            <Text className="text-white text-2xl">
+          <View className="bg-grey-3 mb-5 p-3 rounded-2xl flex flex-row justify-between">
+            <Text className="text-white text-xl">
               {item.id} {item.name}
             </Text>
             <TouchableOpacity

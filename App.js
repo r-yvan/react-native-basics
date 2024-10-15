@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-import { Button, Text, View } from "react-native";
+import HelloWorld from "./components/HelloWorld";
 import FlatlistDemo from "./components/FlatlistDemo";
+import React, { useState } from "react";
+import { View } from "react-native";
 
-export default function App() {
-  const [name, setName] = useState("Rubuto Yvan");
-
+const App = () => {
   return (
-    <View className="flex h-full justify-center items-center bg-gray-900">
+    <View className="flex h-full justify-center items-center bg-grey-1 pt-28">
+      <HelloWorld />
       <FlatlistDemo />
-      <Text>My Name is {name}</Text>
-      <View className="pt-10">
-        <Button title="Update State" onPress={() => setName("Noella")} />
-      </View>
     </View>
   );
-}
+};
+
+export default App;
