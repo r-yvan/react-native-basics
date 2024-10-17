@@ -33,9 +33,9 @@ const FlatlistDemo = () => {
   };
 
   return (
-    <View className="justify-center items-center pt-16">
+    <View className="justify-center items-center h-96 pt-16">
       <FlatList
-        className="flex"
+        className=""
         keyExtractor={(item) => item.id}
         data={people}
         renderItem={({ item }) => (

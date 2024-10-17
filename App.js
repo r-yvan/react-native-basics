@@ -1,14 +1,16 @@
 import HelloWorld from "./components/HelloWorld";
 import FlatlistDemo from "./components/FlatlistDemo";
 import React, { useState } from "react";
-import { View } from "react-native";
+import { SafeAreaView, View } from "react-native";
+import AlertDemo from "./components/AlertDemo";
 
 const App = () => {
   return (
-    <View className="flex h-full justify-center items-center bg-grey-1 pt-28">
+    <SafeAreaView className="flex flex-1 items-center bg-grey-1 pt-28">
       <HelloWorld />
       <FlatlistDemo />
-    </View>
+      <AlertDemo />
+    </SafeAreaView>
   );
 };
 
