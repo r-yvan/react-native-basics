@@ -6,7 +6,7 @@ import AlertDemo from "./components/AlertDemo";
 
 const App = () => {
   return (
-    <SafeAreaView className="flex flex-1 items-center bg-grey-1 pt-28">
+    <SafeAreaView className="flex flex-1 items-center bg-grey-1 pt-10">
       <HelloWorld />
       <FlatlistDemo />
       <AlertDemo />
